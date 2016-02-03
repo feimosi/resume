@@ -23,9 +23,9 @@
 import _ from 'lodash';
 import topTeams from 'javascript/top/teams'
 
-const linkedin = 'https://www.linkedin.com/in/marekgrzybek';
-const github = 'https://github.com/feimosi/';
-const twitter = 'https://twitter.com/feimosi';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/marekgrzybek';
+const GITHUB_URL = 'https://github.com/feimosi';
+const TWITTER_URL = 'https://twitter.com/feimosi';
 
 const skillset = {
     advanced: ['JS', 'Angular', 'Git'],
@@ -40,8 +40,8 @@ function *allSkillsGenerator() {
 }
 
 function getMoreInfo() {
-    const linkedinPromise = fetch(linkedin);
-    const githubPromise = fetch(github);
+    const linkedinPromise = fetch(LINKEDIN_URL);
+    const githubPromise = fetch(GITHUB_URL);
     return Promise.all([linkedinPromise, githubPromise])
                   .then( (resolves) => resolves.map( (result) => result.data) );
 }
