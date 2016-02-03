@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify js/main.js > js/bundle.js"
+    "build": "(browserify js/main.js > js/main.bundle.js ) && browserify js/worker.js > js/worker.bundle.js"
   },
   "repository": {
     "type": "git",

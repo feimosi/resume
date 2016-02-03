@@ -5,7 +5,7 @@ require('../bower_components/typed.js/dist/typed.min.js');
 
 addEventListener('load', function() {
     var code = document.querySelector('.plain-code-block code');
-    var worker = new Worker('js/worker.js');
+    var worker = new Worker('js/worker.bundle.js');
     worker.onmessage = function(event) {
          $(".code-animation-block code").typed({
             strings: [event.data],
